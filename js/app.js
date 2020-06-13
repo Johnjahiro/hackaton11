@@ -1,4 +1,3 @@
-// let screenOperation = document.getElementById("screen-operation");
 let result = document.getElementById("result");
 let button = document.getElementById("button");
 
