@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$white: #fff;
+$black: #000;
+$skyBlue: rgb(19, 182, 182);
+$darkBlue: rgb(11, 32, 82);
+
+$gradient: linear-gradient(
+  to bottom,
+  $skyBlue 0%,
+  $darkBlue 100%
+);
+
+body {
+  font-family: sans-serif;
+}
+
+main {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid red;
+}
+
+.calculator {
+  width: 300px;
+  padding: .7em;
+  background: $gradient;
+  border-radius: 15px;
+}
+
+.screen {
+  line-height: 70px;
+  text-align: right;
+  padding: 1em;  
+  color: $white;
+  background: rgba($black, 0.6);
+
+  &__result {
+    font-size: 3.5em;
+  }
+}
+
+.buttons {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  color: $white;
+  font-weight: bold;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba($white, 0.1);
+  border: 2px solid rgb(160, 159, 159);
+  padding: 1em;
+  font-size: 1.2em;
+  user-select: none;
+
+
+  &:nth-child(4n) {
+    background: rgba($black, 0.2);
+  }
+
+  &:nth-child(13) {
+    border-radius: 0 0 0 15px;
+  }
+
+  &:last-child {
+    border-radius: 0 0 15px 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: rgba($white, 0.3);
+  }
+}
